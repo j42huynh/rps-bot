@@ -1,0 +1,41 @@
+<h1>Rock-Paper-Scissors Bot</h1>
+<h2>Objective</h2>
+<p> 
+Suppose we are playing RPS for money. Each player places a dollar on a table. 
+If there is a winner, the winner takes both dollars from the table. 
+Otherwise, players retain their dollars. Try to win the most you can.
+</p>
+
+<h3>Fixed Strategy Bot Trained Against (probabilites of each action assumed to be used by the opponent)</h3>
+<h5>Rock: $ROCK</h5>
+<h5>Paper: $PAPER</h5>
+<h5>Scissors: $SCISSORS</h5>
+
+<form method="POST" action="/game">
+  <label for="action">Choose an action:</label>
+  <select name="action" id="action">
+    <option value="rock">rock</option>
+    <option value="paper">paper</option>
+	<option value="scissors">scissors</option>
+  </select>
+  <br><br>
+  <input type="submit" value="Submit">
+</form>
+
+<h3>Current balance (in $): $BALANCE</h3>
+
+<form method="GET" action="/">
+  <table>
+    <tr>
+      <td><input type="submit" value="Restart"></td>
+    </tr>
+  </table>
+</form>
+
+<form method="GET" action="/game_with_bot_strat">
+  <table>
+    <tr>
+      <td><input type="submit" value="Show Bot's Learned Strategy"></td>
+    </tr>
+  </table>
+</form>

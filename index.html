@@ -1,0 +1,21 @@
+<h1>Rock-Paper-Scissors Bot</h1>
+
+<p>
+This bot tries to learn the best strategy for rock-paper-scissors using Counterfactual Regret Minimization: 
+<a href="https://wwwf.imperial.ac.uk/~dturaev/neller-lanctot.pdf">https://wwwf.imperial.ac.uk/~dturaev/neller-lanctot.pdf</a>
+</p>
+
+<h2>Objective</h2>
+<p> 
+Suppose we are playing RPS for money. Each player places a dollar on a table. 
+If there is a winner, the winner takes both dollars from the table. 
+Otherwise, players retain their dollars. Try to win the most you can.
+</p>
+
+<form method="GET" action="/game">
+  <table>
+	<tr>
+	  <td><input type="submit" value="Start"></td>
+	</tr>
+  </table>
+</form>
