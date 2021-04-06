@@ -23,9 +23,9 @@ def create_game_file(session_id, game_file_str, start_new, action)
     bot_action = trainer.get_action($sessions_info_dict[session_id][$bot_strat_key])
 
     outcome = 0
-    if (player_action == 0 and bot_action == 2) or (player_action > bot_action)
+    if (player_action == 0 and bot_action == 2) or ((player_action - bot_action) == 1)
       outcome = 1
-    elsif (player_action == 2) and bot_action == 0 or (player_action < bot_action)
+    elsif (player_action == 2 and bot_action == 0) or ((bot_action - player_action) == 1))
       outcome = -1
     end
     $sessions_info_dict[session_id][$balance_key] += outcome
